@@ -1,0 +1,206 @@
+* { 
+  	/* So 100% means 100% */
+  	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+	-webkit-font-smoothing: antialiased;
+	outline: none !important; 
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video { 
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {  display: block; }
+
+body {  line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;  }
+
+ol, ul {  list-style: none; }
+
+blockquote, q {  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {  content: ''; content: none; }
+
+table {  border-collapse: collapse; border-spacing: 0; }
+
+
+/* GENERAL */
+html, body {  height: 100%; }
+
+body { font-size:1em; line-height:1.5em; color:#333; background-size: auto 100%; background-repeat: repeat-x !important; }
+
+#container {  border: 0; background:none; text-align: left; word-wrap: break-word; overflow: hidden; position: relative; }
+
+.clear {  clear: both; }
+.f-left {  float: left; }
+.f-right {  float: right; }
+.hide {  display: none; }
+
+h1, h2, h3, h4, h5, h6 {  font-weight: bold; }
+h1 { font-size:2.0em; line-height:1.2em; }
+h2 { font-size:1.75em; line-height:1.1em; }
+h3 { font-size:1.5em; line-height:1.5em; }
+h4 { font-size:1em; line-height:1.5em; }
+h5 { font-size:0.75em; line-height:2em; }
+h6 { font-size:0.70em; line-height:2em; }
+
+a { text-decoration: none; color:#f26535; -webkit-transition: 0.25s; transition: 0.25s; }
+a:hover, a:focus { text-decoration: none; color: #6e7172; }
+
+strong { font-weight: bold; }
+small { font-size:0.75em; }
+big { font-size: 1.5em; }
+pre { margin: 5px 0; border: 1px solid #ccc; background: #fff; padding:10px; word-wrap: break-word; }
+code, cite, em, abbr, acronym, q { font-style:italic; }
+blockquote, address { padding:5px; font-size:1.2em; font-style:italic; }
+p { margin:0 0 20px; }
+
+table { margin:10px; border-collapse:collapse; }
+table, th, td { border: 1px solid #ccc; padding:10px; }
+
+/*ul { list-style: square; margin: 2px 0 2px 15px; }
+li { margin: 0 0 0 10px; }*/
+ol { list-style: decimal; margin: 2px 0 2px 15px; }
+dl { margin: 10px; }
+dt { margin: 0; font-size:1.2em; font-weight:bold; }
+dd { margin: 0 0 0 10px; }
+
+input, select, textarea { border:1px solid #ccc; padding: 2px; background:#fff; font-size:1em; font-family: 'Open Sans', sans-serif; }
+input[type="submit"]{ cursor:pointer; border:0; -webkit-appearance:none; padding:2px 10px; background: #fff; color:#000; }
+input[type="submit"]:hover { background: #333; }
+select { max-width:100%; }
+
+
+
+
+/* AWESOME H4X TO GET NESTED COLS TO NOT APPLY DOUBLE PADDING ON THE SIDES */
+
+.row > div[class*="col-"] > div[class*="col-"] > div[class*="col-"] { padding:0; }
+.row > div[class*="col-"] > div[class*="col-"] > div[class*="col-"]:first-child { padding-right: inherit; }
+.row > div[class*="col-"] > div[class*="col-"] > div[class*="col-"]:last-child { padding-right: inherit; }
+@media (max-width: 767px) { .row > div[class*="col-"], .row > div[class*="col-"] > div[class*="col-"] { padding:0; }}
+
+
+
+
+/* ALL MY BASE ARE BELONG TO BIGWARE -- BRILLIANT CODE FOR TEXT ALIGNING BASED ON DEVICE SIZE -- BOOTSTRAP SUCKS FOR NOT INCLUDING */
+
+.text-left-not-xs, .text-left-not-sm, .text-left-not-md, .text-left-not-lg {
+    text-align: left;
+}
+.text-center-not-xs, .text-center-not-sm, .text-center-not-md, .text-center-not-lg {
+    text-align: center;
+}
+.text-right-not-xs, .text-right-not-sm, .text-right-not-md, .text-right-not-lg {
+    text-align: right;
+}
+.text-justify-not-xs, .text-justify-not-sm, .text-justify-not-md, .text-justify-not-lg {
+    text-align: justify;
+}
+
+@media (max-width: 767px) {
+    .text-left-not-xs, .text-center-not-xs, .text-right-not-xs, .text-justify-not-xs {
+        text-align: inherit;
+    }
+    .text-left-xs {
+        text-align: left;
+    }
+    .text-center-xs {
+        text-align: center;
+    }
+    .text-right-xs {
+        text-align: right;
+    }
+    .text-justify-xs {
+        text-align: justify;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .text-left-not-sm, .text-center-not-sm, .text-right-not-sm, .text-justify-not-sm {
+        text-align: inherit;
+    }
+    .text-left-sm {
+        text-align: left;
+    }
+    .text-center-sm {
+        text-align: center;
+    }
+    .text-right-sm {
+        text-align: right;
+    }
+    .text-justify-sm {
+        text-align: justify;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .text-left-not-md, .text-center-not-md, .text-right-not-md, .text-justify-not-md {
+        text-align: inherit;
+    }
+    .text-left-md {
+        text-align: left;
+    }
+    .text-center-md {
+        text-align: center;
+    }
+    .text-right-md {
+        text-align: right;
+    }
+    .text-justify-md {
+        text-align: justify;
+    }
+}
+@media (min-width: 1200px) {
+    .text-left-not-lg, .text-center-not-lg, .text-right-not-lg, .text-justify-not-lg {
+        text-align: inherit;
+    }
+    .text-left-lg {
+        text-align: left;
+    }
+    .text-center-lg {
+        text-align: center;
+    }
+    .text-right-lg {
+        text-align: right;
+    }
+    .text-justify-lg {
+        text-align: justify;
+    }
+}
+
+
+@media only screen and (max-width: 767px) {  /* .col-xs-12 {  margin-bottom: 30px; } */ .col-xs-12:last-child/* , .col-xs-12:last-child p */ {  margin-bottom: 0; } }
+
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12
+{ padding-left: 20px; padding-right: 20px; padding-top: 20px; padding-bottom: 20px; }
+
+
+/*
+@media only screen and (max-width: 480px) {
+  .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12
+  { padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px; }
+}
+*/
+
+
+.col-sm-4.nopad, .col-sm-8.nopad { padding-left: 0; padding-right: 0; }
+
+.container.nopadxs, .row.nopadxs { padding-left: 0 !important; padding-right: 0 !important; }

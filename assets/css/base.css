@@ -1,0 +1,102 @@
+html, body { width:100%; height:100% }
+
+body, p { font-family: arial;  font-weight: 400; letter-spacing: -.01em; }
+
+a { text-decoration: none; color:#f26535; -webkit-transition: 0.25s; transition: 0.25s; }
+a:hover, a:focus { text-decoration: none; color: #6e7172; }
+
+a img, a svg { transition: all 0.3s ease-out 0s; }
+a img:hover, a svg:hover { opacity: 0.7; }
+
+p { font-size: 16px; line-height: 22px; margin-bottom: 25px; }
+	@media only screen and (max-width: 767px) { p { font-size: 18px; line-height: 25px; }}
+.nopad { margin-bottom: 0 !important; }
+.nopadall { margin: 0 !important; padding: 0 !important; }
+.nopadright { padding-right: 0 !important; }
+	@media only screen and (max-width: 480px) { .nopadright { padding-right: 20px !important; }}
+
+.row.nopadside { padding-left: 0 !important; padding-right: 0 !important; margin-left: 0 !important; margin-right: 0 !important; }
+
+p.lead { font-size: 1.5em; color: #8c9192; margin-bottom: 50px; }
+	@media only screen and (max-width: 767px) { p.lead { font-size: 18px; line-height: 24px; margin-bottom: 30px; }}
+p.lead:last-child { margin-bottom: 0 !important; }
+
+p.lead small { font-size: 18px; }
+	@media only screen and (max-width: 767px) { p.lead small { font-size: 15px; }}
+
+p.sml { font-size: 15px; line-height: 22px; color: #666666; }
+
+h1, h2, h3, h4, h5, h6 { font-family: arial; font-weight: 300; color: #6e7172; }
+
+h2 { font-size: 50px; margin-bottom: 25px; }
+	@media only screen and (max-width: 767px) { h2 { font-size: 40px; }}
+
+h3 { font-size: 30px; line-height: 35px; }
+	@media only screen and (max-width: 767px) { h3 { font-size: 30px; line-height: 34px; }}
+
+
+
+
+
+
+
+
+.container { width: 100%; padding-left: 20px; padding-right: 20px; }
+.container .row { max-width: 1238px; padding: 60px 30px; margin-right: auto; margin-left: auto; }
+.container.nopad { padding: 0; padding-left: 0 !important; padding-right: 0 !important; }
+.container.nopad .row { padding: 0 40px; }
+	@media only screen and (max-width: 767px) { .container .row { padding: 40px 20px; } .container.nopad .row { padding-left: 30px;} }
+
+.container.none { padding-left: 0 !important; padding-right: 0 !important; }
+
+.container .row.nopad { padding-left: 0 !important; padding-right: 0 !important; }
+
+/* Used to have background image with opacity within container */
+/* <img class="bkg" src="/assets/img/bkg-desktop.jpg"> */
+.bkgopacity { position: relative; overflow: hidden; }
+.bkgopacity .row { position: relative; z-index: 2; }
+.bkgopacity img.bkg { position: absolute; left: 0; top: 0; height: 100%; opacity: 0.15; z-index: 1; }
+
+.row img, .container img { width: 100%; }
+
+.reversed { background: #959a9b; color: #fff; }
+.reversed h2, .reversed h3, .reversed h4, .reversed p, .reversed p.lead { color: #fff; }
+
+.reversed .btn { background: #fff; color: #8c9192; }
+.reversed .btn:hover { color: #8c9192; }
+
+.divider { background: #ccc; height: 2px; display: block; }
+.reversed .divider { background: #fff; }
+
+span.block { display: block; }
+
+
+
+header *, header .container, header .container .row, header .logo a svg, header .logo a img, nav { transition: all 0.25s ease-out 0s !important; }
+
+.social svg { width: 80px; margin: 0 20px; }
+.social svg path { fill: #a5a5a5; }
+
+input:focus, textarea:focus { box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(186, 186, 186, 0.2); }
+
+form.loading:before { content: url("../img/ajax-loader.gif"); position: absolute; left: 50%; top: 50%; }
+form.loading { opacity: .5; }
+.help-block { margin-top: -15px; margin-bottom: 20px; }
+.help-block li { color: #f36f21; font-size: 14px; font-weight: 500; }
+.alert button { display: none; }
+
+.btn { color: 000; transition:all 0.3s ease; text-transform: uppercase; border: none; display: inline-block; margin-top: 20px; padding: 16px 20px 16px 20px; border-radius: 0; font-size: 17px; line-height: 1; border: 1px solid #ccc; }
+	@media only screen and (max-width: 767px) { .btn { font-size: 15px; }}
+.btn:after { content: ""; }
+.btn:hover { opacity: 0.4; }
+.btn.large { font-size: 27px; font-weight: bold; display: block; margin-bottom: 30px; }
+
+
+.modal-dialog { width: 60%; }
+.modal-content { border-radius: 0 }
+.modal.fade .modal-dialog {-webkit-transform:translate(0,0); -ms-transform:translate(0,0); transform:translate(0,0); }
+.modal-body { padding: 40px; }
+.modal-backdrop { opacity:0.8 !important; }
+
+
+
